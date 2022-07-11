@@ -7,3 +7,5 @@ const initialize = (): void => {
 
     content.append(Header());
 }
+
+initialize();
