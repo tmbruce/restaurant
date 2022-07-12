@@ -4,8 +4,7 @@ const initialize = (): void => {
     let content: HTMLDivElement = document.createElement('div');
     content.id = 'content';
     document.body.append(content);
-
+    console.log('hello')
     content.append(Header());
 }
-
-initialize();
+//initialize();
