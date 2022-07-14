@@ -1,6 +1,6 @@
 import Logo from '../assets/logo.png';
 
-const createMain = () => {
+const Home = (() => {
     let img = new Image();
     img.src = Logo;
     img.classList.add('logo');
@@ -8,6 +8,6 @@ const createMain = () => {
     main.classList.add('main');
     main.append(img);
     return main;
-}
+})();
 
-export default createMain;
+export default Home;

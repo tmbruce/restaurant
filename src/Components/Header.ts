@@ -10,6 +10,7 @@ const navLinks = (): HTMLDivElement => {
     } 
 
     createBtn('homeBtn', 'Home');
+    createBtn('menuBtn', 'Menu');
     createBtn('aboutBtn', 'About');
     createBtn('contactBtn', 'Contact');
 

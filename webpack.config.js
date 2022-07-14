@@ -15,6 +15,10 @@ module.exports = {
         use: "ts-loader",
         include: [path.resolve(__dirname, "src")],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   devServer: {
@@ -24,6 +28,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack - Typescript",
+      template: "./src/template.html",
     }),
   ],
   resolve: {
