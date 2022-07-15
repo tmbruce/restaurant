@@ -19,7 +19,6 @@ let events = (() => {
     }
 
     const emit = (eventName: string, data: any) => {
-        console.log(data);
         if (events[eventName]) {
             events[eventName].forEach(function (callback) {
                 callback(data);
