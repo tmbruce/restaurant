@@ -4,7 +4,7 @@ const Home = (() => {
     let img = new Image();
     img.src = Logo;
     img.classList.add('logo');
-    let main = document.createElement('main');
+    let main = document.createElement('div');
     main.classList.add('main');
     main.append(img);
     return main;

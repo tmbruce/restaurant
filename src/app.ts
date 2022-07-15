@@ -1,5 +1,6 @@
 import './reset.css';
 import './style.css';
+import events from './util/events';
 import Header from './Components/Header';
 import Home from './Components/Home';
 
@@ -24,6 +25,7 @@ export const initialize = () => {
         link.addEventListener('click', (e) => {
             e.preventDefault;
             setActiveTab(link.id);
+            events.emit('activeTab', link.id);
         })
     });
 }
