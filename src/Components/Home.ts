@@ -6,6 +6,7 @@ const Home = (() => {
     img.classList.add('logo');
     let main = document.createElement('div');
     main.classList.add('main');
+    main.classList.add('center-align');
     main.append(img);
     return main;
 })();

@@ -3,7 +3,17 @@ body {
   padding: 0;
   background-color: black;
 }
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "m1 m2 m3 m4"
+    "ft ft ft ft";
+}
 .nav {
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -37,12 +47,42 @@ body {
   border-bottom: 1px solid white;
 }
 .logo {
-  height: 500px;
+  /* height: 500px; */
+  width: 33vw;
 }
 .main {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calc((100vh - 600px) / 2);
+}
+.center-align {
+  position: absolute;
+  top: 25%;
+  left: calc((100vw - 33vw) / 2);
+  /* left: calc((100vw - 564px) / 2); */
+  transition: 300ms ease-in-out;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.left-align {
+  position: absolute;
+  transition: 300ms ease-in-out;
+  top: 25%;
+  left: 5%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.content {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-areas:
+    "nav nav"
+    "m1 m2"
+    "ft ft";
+}
+.left-align {
+  left: 5%;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }

@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 
 export const initialize = () => {
+    console.log(window.innerHeight);
     let content = document.querySelector('.content')!;
     content.append(Header(), Home);
     document.querySelector('#homeBtn')!.classList.toggle('active');
@@ -25,7 +26,7 @@ export const initialize = () => {
         link.addEventListener('click', (e) => {
             e.preventDefault;
             setActiveTab(link.id);
-            events.emit('activeTab', link.id);
+            events.emit('tabChange', link.id);
         })
     });
 }
