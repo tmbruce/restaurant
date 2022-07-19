@@ -1,5 +1,7 @@
 import { initialize } from './app';
 import Menu from './Components/Menu';
+import About from './Components/About';
+import Contact from './Components/Contact';
 import events from './util/events';
 
 initialize();
@@ -7,6 +9,7 @@ initialize();
 let logo = document.querySelector('.main')!;
 let title = document.querySelector('title')!;
 let content = document.querySelector('.content')!;
+let currentTab = 'homeBtn';
 
 const toggleLogo = (position: string) => {
     if ((position == 'center') && logo.classList.contains('left-align')){
@@ -26,11 +29,7 @@ const toggleTitle = (_title: string) => {
 const removeTabContainer = () => {
     let tabContainer = document.getElementById('tab-container');
     if (tabContainer) {
-        tabContainer.style.animationName = 'tab-out';
-        setTimeout(() => {
-            if (tabContainer)
-            content.removeChild(tabContainer);
-        }, 400);
+        content.removeChild(tabContainer);
     }
 }
 
@@ -42,6 +41,7 @@ const buildTab = (tab: HTMLDivElement) => {
 }
 
 const tabChange = (data: string) => {
+    currentTab = data;
     removeTabContainer();
     switch (data) {
         case 'homeBtn':
@@ -56,10 +56,12 @@ const tabChange = (data: string) => {
         case 'aboutBtn':
             toggleLogo('left');
             toggleTitle('About');
+            buildTab(About);
             break;
         case 'contactBtn':
             toggleLogo('left');
             toggleTitle('Contact');
+            buildTab(Contact);
             break;
     }
 }
