@@ -27,7 +27,7 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack - Typescript",
+      title: "Jazz De Opus - Home",
       template: "./src/template.html",
     }),
   ],
