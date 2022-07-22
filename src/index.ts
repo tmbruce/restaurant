@@ -22,8 +22,7 @@ const toggleLogo = (position: string) => {
 }
 
 const toggleTitle = (_title: string) => {
-    let titleText = `Jazz De Opus - ${_title}`;
-    title.textContent = titleText;
+    title.textContent = `Jazz De Opus - ${_title}`;
 }
 
 const removeTabContainer = () => {
