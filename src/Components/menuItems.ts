@@ -8,7 +8,7 @@ interface menuItems {
 const menuItems: menuItems[] = [
     {
         name: 'Black Truffle Risotto',
-        description: 'Aged Parmesan, Australian Black Truffles, 3G Shaved Tableside',
+        description: 'Aged Parmesan, Shaved Oregon Black Truffles',
         category: 1,
         price: 49
     },
@@ -56,7 +56,7 @@ const menuItems: menuItems[] = [
     },
     {
         name: 'Parmesan Ricotta Gnocchi',
-        description: 'Housemade Gnocchi, Sliced Black Truffle, Cream Sauce',
+        description: 'Housemade Gnocchi, Shaved Oregon Truffles, Cream Sauce',
         category: 4,
         price: 43
     },

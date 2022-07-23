@@ -87,12 +87,13 @@ body {
 #tab-container {
   width: 33vw;
   border: 2px solid white;
-  height: 75vh;
-  margin: calc((100vh - 75vh - 130px) / 2) auto;
+  margin: auto auto;
   grid-column: 3 / 5;
   animation-name: tab-in;
   animation-duration: 400ms;
   animation-timing-function: ease-in;
+  height: 75vh;
+  overflow: scroll;
 }
 .menu {
   display: flex;
