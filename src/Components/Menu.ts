@@ -1,4 +1,5 @@
 import menuItems from "./menuItems";
+import createElement from "../util/CreateElement";
 
 class MenuItem {
     name: string;
@@ -13,12 +14,6 @@ class MenuItem {
     }
 }
 
-const createElement = (type: string, className: string, textContent?: string | number) => {
-    let element = document.createElement(`${type}`);
-    element.className = `${className}`;
-    if (textContent) element.textContent = textContent.toString();
-    return element;
-}
 const createFoodItem = (item: MenuItem): HTMLDivElement  => {
     const foodItem = createElement('div', 'food-item');
     const foodName = createElement('h2', 'food-title', item.name);
@@ -52,7 +47,6 @@ for (let i = 0; i < menuItems.length; i++) {
             break;
     }
 }
-
 
 const Menu = ((): HTMLDivElement => {
     const menuContainer = createElement('div', 'menu');

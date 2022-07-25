@@ -3,6 +3,7 @@
   src: url("./assets/MarckScript-Regular.ttf");
 }
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: black;
@@ -27,8 +28,7 @@ body {
   height: 25px;
 }
 .title {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 1.2rem;
   font-weight: 300;
 }
@@ -61,18 +61,14 @@ body {
   align-items: center;
 }
 .center-align {
-  position: absolute;
-  /*TODO - modify top placement so image stays centered on resize*/
-  top: calc((100vh - -130px - 33vh * 1.12) / 2);
+  margin: auto auto;
   left: calc((100vw - 33vw) / 2);
   transition: 500ms ease-in-out;
   grid-column: 2 / 4;
 }
 .left-align {
-  position: absolute;
   transition: 300ms ease-out;
-  top: calc(((100vh - 33vh * 1.12) - 130px) / 2);
-  left: calc((50vw - 33vw) / 2);
+  margin: auto auto;
   grid-column: 1 / 3;
 }
 @keyframes tab-in {
@@ -129,19 +125,47 @@ body {
 }
 .about-text {
   color: white;
-  padding: 25px;
+  margin: 25px;
   font-weight: lighter;
   line-height: 150%;
 }
+.about-headline {
+  padding: 25px;
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  font-weight: lighter;
+}
+.about-tagline {
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+}
 #about {
-  height: 100%;
   font-size: large;
 }
-
 .jazz-image {
   width: 33vw;
   height: 75vh;
   float: left;
-  /*shape-outside: polygon(62% 100%, 72% 72%, 29% 49%, 27% 31%, 18% 19%, 8% 16%, 0% 15%, 0% 100%);*/
-  shape-outside: polygon(27% 25%, 31% 38%, 31% 49%, 73% 70%, 60% 100%, 0 100%, 0 15%, 15% 16%);;
+  shape-outside: polygon(27% 25%, 31% 38%, 31% 49%, 73% 70%, 60% 100%, 0 100%, 0 15%, 15% 16%);
+}
+.map-img {
+  display: block;
+  margin: calc((33vw - 28vw) / 2);
+  /*margin: auto auto;*/
+  width: 28vw;
+}
+.store-name, .store-hours, .store-address {
+  padding: 10px;
+  color: white;
+  font-weight: lighter;
+  font-size: larger;
+  text-align: center;
+}
+.store-hours {
+  color: white;
+}
+.store-address {
+  color: white;
 }
