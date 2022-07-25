@@ -62,7 +62,8 @@ body {
 }
 .center-align {
   position: absolute;
-  top: calc((100vh - 33vh / 1.12 - 130px) / 2);
+  /*TODO - modify top placement so image stays centered on resize*/
+  top: calc((100vh - -130px - 33vh * 1.12) / 2);
   left: calc((100vw - 33vw) / 2);
   transition: 500ms ease-in-out;
   grid-column: 2 / 4;
@@ -70,7 +71,7 @@ body {
 .left-align {
   position: absolute;
   transition: 300ms ease-out;
-  top: calc((100vh - 33vh / 1.12 - 130px) / 2);
+  top: calc(((100vh - 33vh * 1.12) - 130px) / 2);
   left: calc((50vw - 33vw) / 2);
   grid-column: 1 / 3;
 }
@@ -125,4 +126,22 @@ body {
 }
 .food-desc {
   font-weight: lighter;
+}
+.about-text {
+  color: white;
+  padding: 25px;
+  font-weight: lighter;
+  line-height: 150%;
+}
+#about {
+  height: 100%;
+  font-size: large;
+}
+
+.jazz-image {
+  width: 33vw;
+  height: 75vh;
+  float: left;
+  /*shape-outside: polygon(62% 100%, 72% 72%, 29% 49%, 27% 31%, 18% 19%, 8% 16%, 0% 15%, 0% 100%);*/
+  shape-outside: polygon(27% 25%, 31% 38%, 31% 49%, 73% 70%, 60% 100%, 0 100%, 0 15%, 15% 16%);;
 }
