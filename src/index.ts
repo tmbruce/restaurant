@@ -1,6 +1,6 @@
 import { initialize } from './app';
-import Menu from './Components/Menu';
-import About from './Components/About';
+// import Menu from './Components/Menu';
+// import About from './Components/About';
 import Contact from './Components/Contact';
 import events from './util/events';
 
@@ -31,6 +31,11 @@ const removeTabContainer = () => {
         content.removeChild(tabContainer);
     }
 }
+const asyncTab = async (component: string) => {
+    const { default: mod } = await import(`./Components/${component}`);
+    buildTab(mod);
+}
+
 
 const buildTab = (tab: HTMLDivElement) => {
     let tabContainer: HTMLDivElement = document.createElement('div');
@@ -39,7 +44,7 @@ const buildTab = (tab: HTMLDivElement) => {
     content.append(tabContainer);
 }
 
-const tabChange = (data: string) => {
+const tabChange = async (data: string) => {
     currentTab = data;
     removeTabContainer();
     switch (data) {
@@ -50,12 +55,13 @@ const tabChange = (data: string) => {
         case 'menuBtn':
             toggleLogo('left');
             toggleTitle('Menu');
-            buildTab(Menu);
+            await asyncTab('Menu');
+
             break;
         case 'aboutBtn':
             toggleLogo('left');
             toggleTitle('About');
-            buildTab(About);
+            await asyncTab('About');
             break;
         case 'contactBtn':
             toggleLogo('left');

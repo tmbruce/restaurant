@@ -7,6 +7,8 @@ const Contact = ((): HTMLDivElement => {
     let mapImg = new Image();
     mapImg.src = Map;
     mapImg.className = 'map-img';
+    mapImg.loading = 'lazy';
+    mapImg.alt = 'Map to location';
     let name = createElement('p', 'store-name', 'Jazz De Opus')
     let time = createElement('p', 'store-hours', 'Open Everyday, 4pm - 12am');
     let address = createElement('p', 'store-address', '33 NW 2nd Ave');

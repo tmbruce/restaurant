@@ -6,6 +6,8 @@ const About = ((): HTMLDivElement => {
     const img = new Image();
     img.src = Sax;
     img.className = 'jazz-image';
+    img.loading = 'lazy';
+    img.alt = 'Man playing saxophone';
     aboutContainer.append(img);
     const aboutHeadline = createElement('h1', 'about-headline', 'Jazz De Opus ⋅ Portland, Oregon');
     const aboutTagline = createElement('h1', 'about-tagline', '— EST. 1972 —');

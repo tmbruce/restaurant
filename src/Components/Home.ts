@@ -4,6 +4,7 @@ const Home = (() => {
     let img = new Image();
     img.src = Logo;
     img.classList.add('logo');
+    img.alt = 'Jazz De Opus Logo';
     let main = document.createElement('div');
     main.classList.add('main');
     main.classList.add('center-align');
