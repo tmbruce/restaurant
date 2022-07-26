@@ -31,11 +31,11 @@ const removeTabContainer = () => {
         content.removeChild(tabContainer);
     }
 }
+
 const asyncTab = async (component: string) => {
     const { default: mod } = await import(`./Components/${component}`);
     buildTab(mod);
 }
-
 
 const buildTab = (tab: HTMLDivElement) => {
     let tabContainer: HTMLDivElement = document.createElement('div');
