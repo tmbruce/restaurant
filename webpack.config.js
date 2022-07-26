@@ -31,7 +31,7 @@ module.exports = {
   devServer: {
     static: "./dist",
   },
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       title: "Jazz De Opus - Home",
